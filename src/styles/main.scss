@@ -146,8 +146,35 @@ main{
         .container{
             display: grid;
             grid-template-columns: 1fr 1fr;
+            img{height: 100%;}
             .text{
                 padding: 2em;
+            }
+        }
+    }
+    .section5{
+        background-color: white;
+        .container{
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            .price-card{
+                img{border-radius: 50%;}
+                button{
+                    padding: 1em;
+                    width: 100%;
+                    margin: 1em auto;
+                    display: block;
+                    border: none;
+                    background-color: $color4;
+                    color: whitesmoke;
+                    font-size: 18px;
+                }
+                border-radius: 5px;
+                background-color: rgb(252, 252, 252);
+                box-shadow: 0 0 6px 1px #081c151a;
+                padding: 1em 2em;
+                border-bottom: 2px solid $color4;
             }
         }
     }
