@@ -48,7 +48,7 @@ main .container-hero .text {
   padding: 1em;
 }
 main .container-hero h1 {
-  font-size: 45px;
+  font-size: 48px;
 }
 main .container-hero h1 span {
   color: #081c15;
@@ -93,7 +93,7 @@ main .section3 h2,
 main .section4 h2,
 main .section5 h2 {
   margin: 1em 0;
-  font-size: 30px;
+  font-size: 40px;
 }
 main .section1 p,
 main .section2 p,
@@ -201,14 +201,18 @@ main .section4 h2 {
   padding: 0 0.5em;
 }
 main .section4 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
 }
-main .section4 .container img {
-  height: 100%;
+main .section4 .container .img {
+  flex: 1;
 }
 main .section4 .container .text {
+  flex: 1;
   padding: 2em;
+}
+main .section4 .container .text p {
+  font-size: 20px;
 }
 main .section5 {
   background-color: white;
@@ -278,6 +282,113 @@ footer li {
 
 img {
   width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+  header nav {
+    position: relative;
+  }
+  main .container-hero {
+    text-align: center;
+    background-image: url(../assets/content/zimg1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    position: relative;
+  }
+  main .container-hero img {
+    display: none;
+  }
+  main .container-hero .btns {
+    justify-content: center;
+  }
+  main .container-hero .btns img {
+    display: block;
+  }
+  main .container-hero h1 {
+    font-size: 40px;
+  }
+  main .container-hero h1 span {
+    color: #081c15;
+  }
+  main .section1,
+  main .section2,
+  main .section3,
+  main .section4,
+  main .section5 {
+    padding: 1em;
+  }
+  main .section1 h2,
+  main .section2 h2,
+  main .section3 h2,
+  main .section4 h2,
+  main .section5 h2 {
+    text-align: center;
+    margin: 1em 0;
+    font-size: 38px;
+  }
+  main .section1 p,
+  main .section2 p,
+  main .section3 p,
+  main .section4 p,
+  main .section5 p {
+    font-size: 15px;
+  }
+  main .section1 .card-container {
+    flex-direction: column;
+  }
+  main .section1 .card-container img {
+    padding: 1em;
+  }
+  main .section3 .card-container {
+    flex-direction: column;
+  }
+  main .section4 .container {
+    flex-direction: column;
+  }
+  main .section5 .container {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  main .section1,
+  .section2,
+  .section3,
+  .section4,
+  .section5 {
+    padding: 1em;
+  }
+  main .section1 h2,
+  .section2 h2,
+  .section3 h2,
+  .section4 h2,
+  .section5 h2 {
+    text-align: center;
+    margin: 1em 0;
+    font-size: 40px;
+  }
+  main .section1 p,
+  .section2 p,
+  .section3 p,
+  .section4 p,
+  .section5 p {
+    font-size: 18px;
+  }
+  main .section1 .card-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  main .section1 .card-container .card {
+    flex: 40%;
+  }
+  main .section1 .card-container img {
+    padding: 1em;
+  }
+  main .section2 {
+    min-height: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
